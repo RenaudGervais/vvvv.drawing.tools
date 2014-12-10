@@ -1,15 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2055" top="2940" width="13650" height="13275">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="3060" top="2010" width="13650" height="13275">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
-   <BOUNDS type="Node" left="2625" top="7380" width="100" height="100">
+   <BOUNDS type="Node" left="585" top="11325" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2625" top="7380" width="6000" height="4500">
+   <BOUNDS type="Box" left="585" top="11325" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="14415" top="6540" width="8055" height="7065">
+   <BOUNDS type="Window" left="20745" top="0" width="8055" height="7065">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="TEST">
    </PIN>
@@ -21,7 +21,7 @@
    </PIN>
    </NODE>
    <NODE nodename="S (Node)" id="2" systemname="S (Node)">
-   <BOUNDS type="Node" left="2640" top="8010" width="0" height="0">
+   <BOUNDS type="Node" left="600" top="11955" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="|Mouse State|">
    </PIN>
@@ -29,7 +29,7 @@
    <LINK srcnodeid="1" srcpinname="Mouse State" dstnodeid="2" dstpinname="Input Value">
    </LINK>
    <NODE systemname="Rasterizer (DX11.RenderState)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Rasterizer (DX11.RenderState)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="990" top="5775" width="100" height="100">
+   <BOUNDS type="Node" left="630" top="9885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="BackCullSimple">
    </PIN>
@@ -37,7 +37,7 @@
    </PIN>
    </NODE>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="6090" top="375" width="100" height="100">
+   <BOUNDS type="Node" left="8040" top="375" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|Mouse State|">
    </PIN>
@@ -45,7 +45,7 @@
    </PIN>
    </NODE>
    <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="6105" top="825" width="100" height="100">
+   <BOUNDS type="Node" left="8055" top="825" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mouse" visible="1">
    </PIN>
@@ -59,9 +59,9 @@
    <LINK srcnodeid="29" srcpinname="Input Value" dstnodeid="30" dstpinname="Mouse">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6465" top="1320" width="480" height="480">
+   <BOUNDS type="Box" left="8415" top="1320" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="6465" top="1320" width="0" height="0">
+   <BOUNDS type="Node" left="8415" top="1320" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -79,7 +79,7 @@
    <LINK srcnodeid="30" srcpinname="Left Button" dstnodeid="32" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="2790" top="6975" width="100" height="100">
+   <BOUNDS type="Node" left="750" top="10920" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -91,7 +91,7 @@
    <LINK srcnodeid="49" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
    </LINK>
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="55">
-   <BOUNDS type="Node" left="2490" top="6495" width="100" height="100">
+   <BOUNDS type="Node" left="450" top="10440" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -165,9 +165,9 @@
    <LINK srcnodeid="65" srcpinname="Geometry Out" dstnodeid="66" dstpinname="Input 2">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="67">
-   <BOUNDS type="Node" left="4485" top="120" width="100" height="100">
+   <BOUNDS type="Node" left="4575" top="60" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4485" top="120" width="285" height="855">
+   <BOUNDS type="Box" left="4575" top="60" width="285" height="855">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -196,12 +196,10 @@
    </NODE>
    <LINK srcnodeid="66" srcpinname="Output" dstnodeid="71" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="55" dstpinname="Geometry">
-   </LINK>
    <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="60" dstpinname="Receive" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Add (Value Spectral)" filename="" nodename="Add (Value Spectral)" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="4740" top="2910" width="100" height="100">
+   <BOUNDS type="Node" left="6705" top="3495" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -209,9 +207,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="89">
-   <BOUNDS type="Node" left="4725" top="3270" width="100" height="100">
+   <BOUNDS type="Node" left="6690" top="3855" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4725" top="3270" width="345" height="360">
+   <BOUNDS type="Box" left="6690" top="3855" width="345" height="360">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -243,7 +241,7 @@
    <LINK srcnodeid="137" srcpinname="Selected Option" dstnodeid="58" dstpinname="Ord Value">
    </LINK>
    <NODE systemname="UpdateSelection (DX11 Transform)" filename="subpatches\UpdateSelection (DX11 Transform).v4p" nodename="UpdateSelection (DX11 Transform)" componentmode="Hidden" id="138">
-   <BOUNDS type="Node" left="4740" top="2175" width="100" height="100">
+   <BOUNDS type="Node" left="6705" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Meshes" visible="1">
    </PIN>
@@ -261,13 +259,13 @@
    <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="138" dstpinname="Meshes">
    </LINK>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="138" dstpinname="Transform">
-   <LINKPOINT x="6369" y="12639">
+   <LINKPOINT x="6762" y="12756">
    </LINKPOINT>
-   <LINKPOINT x="11958" y="12513">
+   <LINKPOINT x="12744" y="12747">
    </LINKPOINT>
-   <LINKPOINT x="11967" y="1962">
+   <LINKPOINT x="13146" y="2313">
    </LINKPOINT>
-   <LINKPOINT x="5106" y="1446">
+   <LINKPOINT x="6678" y="1914">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="30" srcpinname="PositionXY" dstnodeid="138" dstpinname="MouseXY">
@@ -278,14 +276,10 @@
    </LINK>
    <LINK srcnodeid="138" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
    </LINK>
-   <NODE systemname="DrawExtent (Transform)" filename="subpatches\DrawExtent (Transform).v4p" nodename="DrawExtent (Transform)" componentmode="Hidden" id="139">
-   <BOUNDS type="Node" left="795" top="3675" width="100" height="100">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="HandleTransformations" filename="subpatches\HandleTransformations.v4p" componentmode="InAWindow" id="140" nodename="subpatches\HandleTransformations.v4p">
-   <BOUNDS type="Node" left="4725" top="4935" width="100" height="100">
+   <BOUNDS type="Node" left="6690" top="5520" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4725" top="4935" width="4800" height="3600">
+   <BOUNDS type="Box" left="6690" top="5520" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="10875" top="7995" width="9000" height="6000">
    </BOUNDS>
@@ -306,8 +300,6 @@
    </NODE>
    <LINK srcnodeid="140" srcpinname="Transform Out" dstnodeid="124" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="140" srcpinname="Transform Out" dstnodeid="55" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Drag">
    </LINK>
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Is Hit">
@@ -315,9 +307,9 @@
    <LINK srcnodeid="30" srcpinname="PositionXY" dstnodeid="140" dstpinname="PosXY">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7485" top="1380" width="480" height="480">
+   <BOUNDS type="Box" left="9435" top="1380" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7485" top="1380" width="0" height="0">
+   <BOUNDS type="Node" left="9435" top="1380" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -339,7 +331,7 @@
    <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="140" dstpinname="Operation">
    </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="145">
-   <BOUNDS type="Node" left="3285" top="1905" width="100" height="100">
+   <BOUNDS type="Node" left="4140" top="1155" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -347,9 +339,85 @@
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.3">
+   <PIN pinname="ScaleX" slicecount="1" values="0.42">
    </PIN>
    </NODE>
    <LINK srcnodeid="145" srcpinname="Transform Out" dstnodeid="140" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="HandleElementCreation" filename="subpatches\HandleElementCreation.v4p" componentmode="InAWindow" id="147" nodename="subpatches\HandleElementCreation.v4p">
+   <BOUNDS type="Node" left="8790" top="6810" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8790" top="6810" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16980" top="8100" width="10425" height="7920">
+   </BOUNDS>
+   <PIN pinname="Clear all" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Operation" visible="1">
+   </PIN>
+   <PIN pinname="Create" visible="1">
+   </PIN>
+   <PIN pinname="PosXY" visible="1">
+   </PIN>
+   <PIN pinname="Transforms" visible="1">
+   </PIN>
+   <PIN pinname="Mesh Dictionnary" visible="1">
+   </PIN>
+   <PIN pinname="Mesh Map" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="147" dstpinname="Operation">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Create">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="PositionXY" dstnodeid="147" dstpinname="PosXY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="148" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10770" top="5205" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10770" top="5205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Clear all|">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="148" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Clear all">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Transforms" dstnodeid="55" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Decompose (Transform Vector)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Decompose (Transform Vector)" componentmode="Hidden" id="150">
+   <BOUNDS type="Node" left="10365" top="7350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Transforms" dstnodeid="150" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="151">
+   <BOUNDS type="Node" left="8775" top="7590" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Mesh Dictionnary" dstnodeid="151" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Mesh Map" dstnodeid="151" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="151" srcpinname="Output Node" dstnodeid="55" dstpinname="Geometry">
    </LINK>
    </PATCH>
