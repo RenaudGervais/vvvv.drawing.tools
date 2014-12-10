@@ -1,21 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3840" top="5925" width="11535" height="9240">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
-   <NODE systemname="DrawingOperationsPalette (DX11)" filename="DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="765" top="585" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Selected Option" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
    <BOUNDS type="Node" left="2625" top="7380" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2625" top="7380" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="14760" top="6885" width="5910" height="5640">
+   <BOUNDS type="Window" left="18075" top="8430" width="5910" height="5640">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="TEST">
    </PIN>
@@ -112,20 +106,14 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Render State" dstnodeid="55" dstpinname="Render State">
    </LINK>
-   <NODE systemname="DrawExtent (Transform)" filename="DrawExtent (Transform).v4p" nodename="DrawExtent (Transform)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="660" top="3480" width="100" height="100">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="750" top="1080" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Ord Value" visible="1">
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Selected Option" dstnodeid="58" dstpinname="Ord Value">
-   </LINK>
    <NODE systemname="IOBox (Enumerations)" nodename="IOBox (Enumerations)" componentmode="InABox" id="59">
    <BOUNDS type="Node" left="750" top="1500" width="100" height="100">
    </BOUNDS>
@@ -146,30 +134,6 @@
    <PIN pinname="Enum" slicecount="1" values="DrawingOperationsPalette_Enum">
    </PIN>
    <PIN pinname="Receive" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="UpdateSelection (DX11 Transform)" filename="UpdateSelection (DX11 Transform).v4p" componentmode="Hidden" id="62" nodename="UpdateSelection (DX11 Transform).v4p">
-   <BOUNDS type="Node" left="4755" top="2520" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4755" top="2520" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="13935" top="7635" width="10695" height="8745">
-   </BOUNDS>
-   <PIN pinname="Meshes" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Meshes Indexes" visible="1" slicecount="3" values="0,1,0">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="MouseXY" visible="1">
-   </PIN>
-   <PIN pinname="Selected" visible="1">
-   </PIN>
-   <PIN pinname="Selection Highlight" visible="1">
-   </PIN>
-   <PIN pinname="Highlight Transform" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="64">
@@ -234,15 +198,7 @@
    </LINK>
    <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="55" dstpinname="Geometry">
    </LINK>
-   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="62" dstpinname="Select">
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="PositionXY" dstnodeid="62" dstpinname="MouseXY">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 2" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="60" dstpinname="Receive" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="62" dstpinname="Meshes">
    </LINK>
    <NODE systemname="Add (Value Spectral)" filename="" nodename="Add (Value Spectral)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="4740" top="2910" width="100" height="100">
@@ -252,8 +208,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="89">
    <BOUNDS type="Node" left="4725" top="3270" width="100" height="100">
    </BOUNDS>
@@ -305,7 +259,7 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="110">
@@ -384,16 +338,6 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="62" dstpinname="Transform">
-   <LINKPOINT x="6525" y="12765">
-   </LINKPOINT>
-   <LINKPOINT x="12285" y="12855">
-   </LINKPOINT>
-   <LINKPOINT x="12420" y="2475">
-   </LINKPOINT>
-   <LINKPOINT x="4920" y="2160">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="136">
    <BOUNDS type="Node" left="5640" top="8490" width="100" height="100">
    </BOUNDS>
@@ -612,4 +556,52 @@
    </LINK>
    <LINK srcnodeid="110" srcpinname="XYZ" dstnodeid="134" dstpinname="XYZ">
    </LINK>
+   <NODE systemname="DrawingOperationsPalette (DX11)" filename="subpatches\DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="Hidden" id="137">
+   <BOUNDS type="Node" left="765" top="540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Selected Option" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="Selected Option" dstnodeid="58" dstpinname="Ord Value">
+   </LINK>
+   <NODE systemname="UpdateSelection (DX11 Transform)" filename="subpatches\UpdateSelection (DX11 Transform).v4p" nodename="UpdateSelection (DX11 Transform)" componentmode="Hidden" id="138">
+   <BOUNDS type="Node" left="4740" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Meshes" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="MouseXY" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Selection Highlight" visible="1">
+   </PIN>
+   <PIN pinname="Selected" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Output Node" dstnodeid="138" dstpinname="Meshes">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="138" dstpinname="Transform">
+   <LINKPOINT x="6369" y="12639">
+   </LINKPOINT>
+   <LINKPOINT x="11958" y="12513">
+   </LINKPOINT>
+   <LINKPOINT x="11967" y="1962">
+   </LINKPOINT>
+   <LINKPOINT x="5106" y="1446">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="PositionXY" dstnodeid="138" dstpinname="MouseXY">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="138" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="138" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 2" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="138" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
+   </LINK>
+   <NODE systemname="DrawExtent (Transform)" filename="subpatches\DrawExtent (Transform).v4p" nodename="DrawExtent (Transform)" componentmode="Hidden" id="139">
+   <BOUNDS type="Node" left="795" top="3675" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
