@@ -134,7 +134,7 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="DrawingOperationsPalette (DX11)" filename="subpatches\DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="InAWindow" id="137">
+   <NODE systemname="DrawingOperationsPalette (DX11)" filename="subpatches\DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="Hidden" id="137">
    <BOUNDS type="Node" left="765" top="540" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Selected Option" visible="1">
