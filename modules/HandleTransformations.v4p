@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\HandleTransformations.v4p" systemname="HandleTransformations" filename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\HandleTransformations.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="14130" top="7785" width="12090" height="8865">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\HandleTransformations.v4p" systemname="HandleTransformations" filename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\HandleTransformations.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="-13875" top="6645" width="12090" height="8865">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -135,7 +135,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -145,7 +145,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden" id="15">
@@ -153,7 +153,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -200,27 +200,7 @@
    </NODE>
    <LINK srcnodeid="17" srcpinname="Transform Out" dstnodeid="14" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Output 1" dstnodeid="17" dstpinname="Transform In">
-   <LINKPOINT x="1560" y="7815">
-   </LINKPOINT>
-   <LINKPOINT x="885" y="7815">
-   </LINKPOINT>
-   <LINKPOINT x="885" y="6015">
-   </LINKPOINT>
-   <LINKPOINT x="1575" y="6015">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="13" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output 1" dstnodeid="16" dstpinname="Transform In">
-   <LINKPOINT x="3870" y="7905">
-   </LINKPOINT>
-   <LINKPOINT x="3525" y="7905">
-   </LINKPOINT>
-   <LINKPOINT x="3525" y="5940">
-   </LINKPOINT>
-   <LINKPOINT x="3900" y="5940">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="2325" top="6690" width="100" height="100">
@@ -277,16 +257,6 @@
    <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="13" dstpinname="Default 1">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="12" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Output 1" dstnodeid="15" dstpinname="Transform In">
-   <LINKPOINT x="6270" y="7890">
-   </LINKPOINT>
-   <LINKPOINT x="5805" y="7890">
-   </LINKPOINT>
-   <LINKPOINT x="5805" y="5925">
-   </LINKPOINT>
-   <LINKPOINT x="6240" y="5925">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="Translate (Transform Vector)" nodename="Translate (Transform Vector)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="7080" top="6675" width="100" height="100">
