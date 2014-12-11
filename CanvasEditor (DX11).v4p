@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="2325" top="2970" width="13650" height="13275">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
@@ -124,8 +124,8 @@
    </NODE>
    <LINK srcnodeid="87" srcpinname="Output" dstnodeid="89" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="FrameDelay (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Transform)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="7485" top="8820" width="100" height="100">
+   <NODE systemname="FrameDelay (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Transform)" componentmode="Hidden" id="124" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="5265" top="8670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -158,17 +158,21 @@
    <PIN pinname="Selected Index" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="138" dstpinname="Transform">
-   <LINKPOINT x="8010" y="10452">
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="138" dstpinname="Transform" hiddenwhenlocked="1">
+   <LINKPOINT x="5280" y="10365">
    </LINKPOINT>
-   <LINKPOINT x="13680" y="11019">
+   <LINKPOINT x="10740" y="10365">
    </LINKPOINT>
-   <LINKPOINT x="13770" y="1161">
+   <LINKPOINT x="10740" y="855">
    </LINKPOINT>
-   <LINKPOINT x="6990" y="1338">
+   <LINKPOINT x="6930" y="855">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="138" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 2" hiddenwhenlocked="1">
+   <LINK srcnodeid="138" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="7995" y="6960">
+   </LINKPOINT>
+   <LINKPOINT x="1170" y="6960">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="138" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
    </LINK>
@@ -198,10 +202,14 @@
    </NODE>
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Is Hit">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="140" dstpinname="Operation">
+   <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="140" dstpinname="Operation" linkstyle="Bezier">
+   <LINKPOINT x="810" y="4028">
+   </LINKPOINT>
+   <LINKPOINT x="7650" y="4028">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Store (Transform)" filename="%VVVV%\addonpack\lib\nodes\plugins\Store.dll" nodename="Store (Transform)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="7560" top="8130" width="3720" height="270">
+   <BOUNDS type="Node" left="5265" top="8085" width="3720" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -329,11 +337,13 @@
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Insert">
+   </PIN>
    </NODE>
    <LINK srcnodeid="154" srcpinname="Output" dstnodeid="164" dstpinname="Input">
    </LINK>
    <NODE systemname="DrawExtent (Transform)" filename="modules\DrawExtent (Transform).v4p" nodename="DrawExtent (Transform)" componentmode="Hidden" id="165">
-   <BOUNDS type="Node" left="3015" top="5340" width="100" height="100">
+   <BOUNDS type="Node" left="5265" top="5310" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Draw" visible="1">
    </PIN>
@@ -341,10 +351,20 @@
    </PIN>
    <PIN pinname="Transform Extent" visible="1">
    </PIN>
+   <BOUNDS type="Box" left="5265" top="5310">
+   </BOUNDS>
    </NODE>
-   <LINK srcnodeid="154" srcpinname="Output" dstnodeid="165" dstpinname="Draw">
+   <LINK srcnodeid="154" srcpinname="Output" dstnodeid="165" dstpinname="Draw" linkstyle="VHV">
+   <LINKPOINT x="765" y="5235">
+   </LINKPOINT>
+   <LINKPOINT x="5295" y="5235">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="153" dstpinname="Insert">
+   <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="153" dstpinname="Insert" linkstyle="Bezier">
+   <LINKPOINT x="810" y="6818">
+   </LINKPOINT>
+   <LINKPOINT x="7875" y="6818">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="166">
    <BOUNDS type="Node" left="765" top="5985" width="100" height="100">
@@ -356,14 +376,18 @@
    </NODE>
    <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="166" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="55" dstpinname="Transform In">
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="55" dstpinname="Transform In" linkstyle="Bezier">
+   <LINKPOINT x="5265" y="9383">
+   </LINKPOINT>
+   <LINKPOINT x="990" y="9383">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="124" dstpinname="Input 1">
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="124" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="167" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11175" top="7125" width="480" height="480">
+   <BOUNDS type="Box" left="8940" top="7440" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11175" top="7125" width="0" height="0">
+   <BOUNDS type="Node" left="8940" top="7440" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -385,7 +409,7 @@
    <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="153" dstpinname="Clear">
    </LINK>
    <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="172">
-   <BOUNDS type="Node" left="780" top="6420" width="100" height="100">
+   <BOUNDS type="Node" left="780" top="6420" width="1230" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -428,12 +452,20 @@
    <PIN pinname="Current Mesh ID" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="173" dstpinname="Insert">
+   <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="173" dstpinname="Insert" linkstyle="Bezier">
+   <LINKPOINT x="810" y="6833">
+   </LINKPOINT>
+   <LINKPOINT x="3360" y="6833">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="173" dstpinname="Clear">
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="173" dstpinname="Clear" linkstyle="VHV">
+   <LINKPOINT x="8940" y="8003">
+   </LINKPOINT>
+   <LINKPOINT x="4230" y="8003">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="186">
-   <BOUNDS type="Node" left="8910" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="6315" top="7680" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -444,12 +476,16 @@
    </NODE>
    <LINK srcnodeid="186" srcpinname="Output" dstnodeid="153" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="173" dstpinname="Index">
+   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="173" dstpinname="Index" linkstyle="VHV">
+   <LINKPOINT x="6315" y="8018">
+   </LINKPOINT>
+   <LINKPOINT x="2640" y="8018">
+   </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="187" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8910" top="6270" width="795" height="240">
+   <BOUNDS type="Box" left="6300" top="6600" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="8910" top="6270" width="0" height="0">
+   <BOUNDS type="Node" left="6300" top="6600" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -462,12 +498,16 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="138" srcpinname="Selected Index" dstnodeid="187" dstpinname="Y Input Value">
+   <LINK srcnodeid="138" srcpinname="Selected Index" dstnodeid="187" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="7365" y="4808">
+   </LINKPOINT>
+   <LINKPOINT x="6330" y="4808">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="187" srcpinname="Y Output Value" dstnodeid="186" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="188">
-   <BOUNDS type="Node" left="780" top="8640" width="100" height="100">
+   <BOUNDS type="Node" left="780" top="8490" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -478,11 +518,15 @@
    </NODE>
    <LINK srcnodeid="180" srcpinname="Meshes Dictionary" dstnodeid="188" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="188" dstpinname="Index">
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="188" dstpinname="Index" linkstyle="VHV">
+   <LINKPOINT x="2055" y="8423">
+   </LINKPOINT>
+   <LINKPOINT x="1455" y="8423">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="188" srcpinname="Output Node" dstnodeid="55" dstpinname="Geometry">
    </LINK>
-   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="189">
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="189" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="2055" top="8685" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -490,9 +534,9 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="189" dstpinname="Input 1">
+   <LINK srcnodeid="173" srcpinname="Output" dstnodeid="189" dstpinname="Input 1" hiddenwhenlocked="1">
    </LINK>
-   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="190">
+   <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="190" hiddenwhenlocked="1">
    <BOUNDS type="Node" left="1425" top="9075" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
@@ -502,24 +546,16 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="180" srcpinname="Meshes Dictionary" dstnodeid="190" dstpinname="Input Node">
+   <LINK srcnodeid="180" srcpinname="Meshes Dictionary" dstnodeid="190" dstpinname="Input Node" linkstyle="VHV" hiddenwhenlocked="1">
+   <LINKPOINT x="810" y="8970">
+   </LINKPOINT>
+   <LINKPOINT x="1455" y="8970">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="189" srcpinname="Output 1" dstnodeid="190" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="190" srcpinname="Output Node" dstnodeid="138" dstpinname="Meshes">
-   <LINKPOINT x="3695" y="11230">
-   </LINKPOINT>
-   <LINKPOINT x="10275" y="10820">
-   </LINKPOINT>
-   <LINKPOINT x="11860" y="7860">
-   </LINKPOINT>
-   <LINKPOINT x="11715" y="1630">
-   </LINKPOINT>
-   <LINKPOINT x="6651" y="1340">
-   </LINKPOINT>
+   <LINK srcnodeid="189" srcpinname="Output 1" dstnodeid="190" dstpinname="Index" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="191">
-   <BOUNDS type="Node" left="9150" top="7485" width="100" height="100">
+   <BOUNDS type="Node" left="6825" top="7335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -528,14 +564,22 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="172" srcpinname="Output" dstnodeid="191" dstpinname="Input 1">
+   <LINK srcnodeid="172" srcpinname="Output" dstnodeid="191" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="840" y="6998">
+   </LINKPOINT>
+   <LINKPOINT x="6825" y="6998">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="191" srcpinname="Output" dstnodeid="153" dstpinname="Set">
    </LINK>
-   <LINK srcnodeid="140" srcpinname="Transforming" dstnodeid="191" dstpinname="Input 2">
+   <LINK srcnodeid="140" srcpinname="Transforming" dstnodeid="191" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="9060" y="6488">
+   </LINKPOINT>
+   <LINKPOINT x="7185" y="6488">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Switch (Transform Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\TransformsAdvanced.dll" nodename="Switch (Transform Advanced)" componentmode="Hidden" id="193">
-   <BOUNDS type="Node" left="7185" top="6945" width="100" height="100">
+   <BOUNDS type="Node" left="5265" top="6030" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -545,17 +589,29 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Create Vs Transform|">
+   </PIN>
+   <BOUNDS type="Box" left="5265" top="6030">
+   </BOUNDS>
    </NODE>
-   <LINK srcnodeid="140" srcpinname="Transforming" dstnodeid="193" dstpinname="Input">
+   <LINK srcnodeid="140" srcpinname="Transforming" dstnodeid="193" dstpinname="Input" linkstyle="VHV">
+   <LINKPOINT x="9060" y="5863">
+   </LINKPOINT>
+   <LINKPOINT x="5325" y="5808">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="140" srcpinname="Transform Out" dstnodeid="193" dstpinname="Transform 2">
    </LINK>
-   <LINK srcnodeid="165" srcpinname="Transform Extent" dstnodeid="193" dstpinname="Transform 1">
+   <LINK srcnodeid="165" srcpinname="Transform Extent" dstnodeid="193" dstpinname="Transform 1" linkstyle="Bezier">
+   <LINKPOINT x="5325" y="5790">
+   </LINKPOINT>
+   <LINKPOINT x="6270" y="5790">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="193" srcpinname="Output" dstnodeid="153" dstpinname="Input">
    </LINK>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="195">
-   <BOUNDS type="Node" left="7260" top="4635" width="100" height="100">
+   <BOUNDS type="Node" left="7290" top="4890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -566,18 +622,14 @@
    </NODE>
    <LINK srcnodeid="138" srcpinname="Selected Index" dstnodeid="195" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="195" dstpinname="Input Node">
-   <LINKPOINT x="7976" y="10609">
+   <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="195" dstpinname="Input Node" hiddenwhenlocked="1">
+   <LINKPOINT x="5280" y="9465">
    </LINKPOINT>
-   <LINKPOINT x="11736" y="10389">
+   <LINKPOINT x="10170" y="9465">
    </LINKPOINT>
-   <LINKPOINT x="12107" y="4723">
+   <LINKPOINT x="10170" y="3825">
    </LINKPOINT>
-   <LINKPOINT x="10843" y="3197">
-   </LINKPOINT>
-   <LINKPOINT x="8934" y="2826">
-   </LINKPOINT>
-   <LINKPOINT x="7594" y="3326">
+   <LINKPOINT x="7305" y="3825">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="195" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
@@ -679,14 +731,18 @@
    <LINK srcnodeid="204" srcpinname="Input Value" dstnodeid="140" dstpinname="PosXY">
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="205">
-   <BOUNDS type="Node" left="3990" top="4875" width="100" height="100">
+   <BOUNDS type="Node" left="5265" top="4875" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="EditorMouseXY">
    </PIN>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="205" srcpinname="Input Value" dstnodeid="165" dstpinname="PosXY">
+   <LINK srcnodeid="205" srcpinname="Input Value" dstnodeid="165" dstpinname="PosXY" linkstyle="Bezier">
+   <LINKPOINT x="5325" y="5213">
+   </LINKPOINT>
+   <LINKPOINT x="6255" y="5213">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="206">
    <BOUNDS type="Node" left="4215" top="11820" width="100" height="100">
@@ -713,7 +769,7 @@
    </PIN>
    </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="208">
-   <BOUNDS type="Node" left="10215" top="6435" width="100" height="100">
+   <BOUNDS type="Node" left="7335" top="7320" width="465" height="270">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -721,9 +777,11 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="210">
-   <BOUNDS type="Node" left="10620" top="5925" width="100" height="100">
+   <BOUNDS type="Node" left="7740" top="6810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="EditorDeleteKey">
    </PIN>
@@ -732,11 +790,19 @@
    </NODE>
    <LINK srcnodeid="210" srcpinname="Input Value" dstnodeid="208" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="208" dstpinname="Input 1">
+   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="208" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="5745" y="4495">
+   </LINKPOINT>
+   <LINKPOINT x="8325" y="4790">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="208" srcpinname="Output" dstnodeid="153" dstpinname="Remove">
    </LINK>
-   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="173" dstpinname="Remove">
+   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="173" dstpinname="Remove" linkstyle="VHV">
+   <LINKPOINT x="7335" y="7838">
+   </LINKPOINT>
+   <LINKPOINT x="3180" y="7838">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="211">
    <BOUNDS type="Node" left="4215" top="12195" width="100" height="100">
@@ -749,5 +815,15 @@
    <LINK srcnodeid="206" srcpinname="Delete" dstnodeid="211" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="211" srcpinname="Up Edge" dstnodeid="207" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="190" srcpinname="Output Node" dstnodeid="138" dstpinname="Meshes" hiddenwhenlocked="1">
+   <LINKPOINT x="1440" y="9705">
+   </LINKPOINT>
+   <LINKPOINT x="10530" y="9705">
+   </LINKPOINT>
+   <LINKPOINT x="10530" y="600">
+   </LINKPOINT>
+   <LINKPOINT x="6720" y="615">
+   </LINKPOINT>
    </LINK>
    </PATCH>
