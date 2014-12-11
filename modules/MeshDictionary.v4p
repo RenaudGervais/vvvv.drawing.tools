@@ -1,0 +1,47 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p" systemname="MeshDictionary" filename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p">
+   <BOUNDS type="Window" left="5370" top="10560" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="480" top="390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="915" top="720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Resolution" slicecount="1" values="32">
+   </PIN>
+   <PIN pinname="Geometry Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Geometry)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="465" top="1065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="0">
+   <BOUNDS type="Node" left="465" top="1440" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="465" top="1440" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Meshes Dictionary|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   </PATCH>
