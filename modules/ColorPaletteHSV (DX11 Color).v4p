@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.nodes\modules\ColorPaletteHSV (DX11 Color).v4p" systemname="ColorPaletteHSV (DX11.Color)" filename="C:\vvvv\projects\vvvv.nodes\modules\ColorPaletteHSV (DX11.Color).v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\ColorPaletteHSV (DX11 Color).v4p" systemname="ColorPaletteHSV (DX11.Color)" filename="C:\vvvv\projects\vvvv.nodes\modules\ColorPaletteHSV (DX11.Color).v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="14655" top="4650" width="10965" height="10530">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
@@ -29,7 +29,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1545" top="4365" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="2925" top="1425" width="7425" height="8265">
+   <BOUNDS type="Window" left="17070" top="7890" width="4500" height="5355">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Palette">
    </PIN>
@@ -121,7 +121,7 @@
    </PIN>
    <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="1" values="0.37483977293536">
+   <PIN pinname="Internal Value" slicecount="1" values="0.5598791430141">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>

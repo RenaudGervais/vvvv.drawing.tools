@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="2325" top="2970" width="13650" height="13275">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="360">
+   <BOUNDS type="Window" left="3930" top="2955" width="12885" height="13725">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -75,9 +75,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Enumerations)" nodename="IOBox (Enumerations)" componentmode="InABox" id="59">
-   <BOUNDS type="Node" left="750" top="1500" width="100" height="100">
+   <BOUNDS type="Node" left="1605" top="1080" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="750" top="1500" width="645" height="1185">
+   <BOUNDS type="Box" left="1605" top="1080" width="915" height="1710">
    </BOUNDS>
    <PIN pinname="Input Enum" visible="1">
    </PIN>
@@ -85,11 +85,13 @@
    </PIN>
    <PIN pinname="Style" slicecount="1" values="List">
    </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Enum" dstnodeid="59" dstpinname="Input Enum">
    </LINK>
    <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="60" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="90" top="1500" width="100" height="100">
+   <BOUNDS type="Node" left="1875" top="1485" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enum" slicecount="1" values="DrawingOperationsPalette_Enum">
    </PIN>
@@ -132,7 +134,7 @@
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="DrawingOperationsPalette (DX11)" filename="subpatches\DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="Hidden" id="137">
+   <NODE systemname="DrawingOperationsPalette (DX11)" filename="subpatches\DrawingOperationsPalette (DX11).v4p" nodename="DrawingOperationsPalette (DX11)" componentmode="InAWindow" id="137">
    <BOUNDS type="Node" left="765" top="540" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Selected Option" visible="1">
@@ -176,7 +178,7 @@
    </LINK>
    <LINK srcnodeid="138" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
    </LINK>
-   <NODE systemname="HandleTransformations" filename="subpatches\HandleTransformations.v4p" componentmode="InAWindow" id="140" nodename="subpatches\HandleTransformations.v4p">
+   <NODE systemname="HandleTransformations" filename="subpatches\HandleTransformations.v4p" componentmode="Hidden" id="140" nodename="subpatches\HandleTransformations.v4p">
    <BOUNDS type="Node" left="7290" top="5400" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7290" top="5400" width="4800" height="3600">
@@ -203,9 +205,9 @@
    <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Is Hit">
    </LINK>
    <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="140" dstpinname="Operation" linkstyle="Bezier">
-   <LINKPOINT x="810" y="4028">
+   <LINKPOINT x="1380" y="3748">
    </LINKPOINT>
-   <LINKPOINT x="7650" y="4028">
+   <LINKPOINT x="7935" y="3888">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Store (Transform)" filename="%VVVV%\addonpack\lib\nodes\plugins\Store.dll" nodename="Store (Transform)" componentmode="Hidden" id="153">
@@ -265,7 +267,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="2" values="0,1">
+   <PIN pinname="Y Input Value" slicecount="2" values="3,4">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="2">
    </PIN>
@@ -620,7 +622,11 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="138" srcpinname="Selected Index" dstnodeid="195" dstpinname="Index">
+   <LINK srcnodeid="138" srcpinname="Selected Index" dstnodeid="195" dstpinname="Index" linkstyle="Bezier">
+   <LINKPOINT x="7380" y="3953">
+   </LINKPOINT>
+   <LINKPOINT x="7920" y="3953">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="195" dstpinname="Input Node" hiddenwhenlocked="1">
    <LINKPOINT x="5280" y="9465">
@@ -826,4 +832,8 @@
    <LINKPOINT x="6720" y="615">
    </LINKPOINT>
    </LINK>
+   <NODE systemname="ColorPaletteHSV (DX11 Color)" filename="modules\ColorPaletteHSV (DX11 Color).v4p" nodename="ColorPaletteHSV (DX11 Color)" componentmode="Hidden" id="212">
+   <BOUNDS type="Node" left="3780" top="525" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
