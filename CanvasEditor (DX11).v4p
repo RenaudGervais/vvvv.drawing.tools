@@ -491,69 +491,13 @@
    </BOUNDS>
    <PIN pinname="Meshes Dictionary" visible="1">
    </PIN>
-   </NODE>
-   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="184">
-   <BOUNDS type="Node" left="4815" top="7485" width="600" height="270">
+   <BOUNDS type="Window" left="18195" top="9750" width="9000" height="6000">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Operation" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="6">
-   </PIN>
-   <PIN pinname="Input 6" visible="1">
-   </PIN>
-   <PIN pinname="Input 5" visible="1">
-   </PIN>
-   <PIN pinname="Input 4" visible="1">
-   </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Current Mesh ID" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="NIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\NIL (Spreads).v4p" nodename="NIL (Spreads)" componentmode="Hidden" id="183">
-   <BOUNDS type="Node" left="5625" top="6900" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="184" dstpinname="Input 6">
-   </LINK>
-   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="184" dstpinname="Input 5">
-   </LINK>
-   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="184" dstpinname="Input 4">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="182">
-   <BOUNDS type="Node" left="4965" top="7125" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4965" top="7125" width="300" height="240">
-   </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="182" srcpinname="Y Output Value" dstnodeid="184" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="181">
-   <BOUNDS type="Node" left="5130" top="6825" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5130" top="6825" width="300" height="240">
-   </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="184" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="158" srcpinname="Ord Value" dstnodeid="184" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="184" srcpinname="Output" dstnodeid="173" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="173" dstpinname="Insert">
    </LINK>
    <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="173" dstpinname="Clear">
@@ -652,10 +596,6 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="192">
-   <BOUNDS type="Node" left="6330" top="7410" width="100" height="100">
-   </BOUNDS>
-   </NODE>
    <LINK srcnodeid="172" srcpinname="Output" dstnodeid="191" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="191" srcpinname="Output" dstnodeid="153" dstpinname="Set">
@@ -709,5 +649,9 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="195" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="180" dstpinname="Operation">
+   </LINK>
+   <LINK srcnodeid="180" srcpinname="Current Mesh ID" dstnodeid="173" dstpinname="Input">
    </LINK>
    </PATCH>

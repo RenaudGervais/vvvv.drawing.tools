@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p" systemname="MeshDictionary" filename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p">
-   <BOUNDS type="Window" left="5370" top="10560" width="9000" height="6000">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p" systemname="MeshDictionary" filename="C:\vvvv\projects\vvvv.drawing.tools\modules\MeshDictionary.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="18195" top="9750" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="Quad (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Quad (DX11.Geometry)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="480" top="390" width="100" height="100">
@@ -44,4 +44,112 @@
    </LINK>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
+   <NODE systemname="IOBox (Enumerations)" nodename="IOBox (Enumerations)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="2415" top="225" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2415" top="225" width="795" height="1260">
+   </BOUNDS>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Input Enum" slicecount="1" values="Square">
+   </PIN>
+   <PIN pinname="Style" slicecount="1" values="List">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Operation">
+   </PIN>
+   </NODE>
+   <NODE systemname="NULL (Enumerations)" nodename="NULL (Enumerations)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2595" top="435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" slicecount="1" values="DrawingOperationsPalette_Enum">
+   </PIN>
+   <PIN pinname="Receive" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Enum" dstnodeid="5" dstpinname="Receive">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="2415" top="3345" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2415" top="3345" width="450" height="255">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Current Mesh ID|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="2415" top="2700" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\NIL (Spreads).v4p" nodename="NIL (Spreads)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="3225" top="2115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="11" dstpinname="Input 6">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="11" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="11" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="9">
+   <BOUNDS type="Node" left="2565" top="2340" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2565" top="2340" width="300" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="8">
+   <BOUNDS type="Node" left="2730" top="2040" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2730" top="2040" width="300" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Enum2Ord (Enumerations)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="2430" top="1680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Enum" dstnodeid="12" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Ord Value" dstnodeid="11" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
