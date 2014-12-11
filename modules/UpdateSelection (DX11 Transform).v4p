@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.nodes\modules\Palette\UpdateSelection (DX11 Transform).v4p" systemname="UpdateSelection (DX11 Transform)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\UpdateSelection (DX11 Transform).v4p" scrollx="60" scrolly="-360">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\UpdateSelection (DX11 Transform).v4p" systemname="UpdateSelection (DX11 Transform)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\UpdateSelection (DX11 Transform).v4p" scrollx="60" scrolly="-360">
    <BOUNDS type="Window" left="13935" top="7635" width="10695" height="8745">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
@@ -379,5 +379,37 @@
    </LINKPOINT>
    <LINKPOINT x="3780" y="3030">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="1245" top="5820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="51" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="420" y="4598">
+   </LINKPOINT>
+   <LINKPOINT x="1260" y="4598">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1500" top="7530" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="7530" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Selected Index|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Input Index" dstnodeid="52" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
