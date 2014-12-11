@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\HandleElementCreation.v4p" systemname="HandleElementCreation" filename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\HandleElementCreation.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="16980" top="8100" width="10425" height="7920">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\HandleElementCreation.v4p" systemname="HandleElementCreation" filename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\HandleElementCreation.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="3750" top="7005" width="10425" height="7920">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -77,7 +77,7 @@
    <NODE systemname="Queue (Transform)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Transform)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="4350" top="4155" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Frame Count" slicecount="1" values="2000" visible="1">
+   <PIN pinname="Frame Count" slicecount="1" visible="1" values="2000">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>

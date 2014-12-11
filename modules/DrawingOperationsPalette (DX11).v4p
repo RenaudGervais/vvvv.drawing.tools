@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\subpatches\DrawingOperationsPalette (DX11).v4p" systemname="DrawingOperationsPalette (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\DrawingOperationsPalette (DX11).v4p" scrollx="0" scrolly="0" bgcolor="14935011">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\modules\DrawingOperationsPalette (DX11).v4p" systemname="DrawingOperationsPalette (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\DrawingOperationsPalette (DX11).v4p" scrollx="0" scrolly="0" bgcolor="14935011">
    <BOUNDS type="Window" left="9750" top="4815" width="9105" height="7575">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
