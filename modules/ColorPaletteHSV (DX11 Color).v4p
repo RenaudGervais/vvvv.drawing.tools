@@ -29,7 +29,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1545" top="4365" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="17070" top="7890" width="4500" height="5355">
+   <BOUNDS type="Window" left="8895" top="0" width="4920" height="2475">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Palette">
    </PIN>
@@ -121,7 +121,7 @@
    </PIN>
    <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="1" values="0.5598791430141">
+   <PIN pinname="Internal Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>

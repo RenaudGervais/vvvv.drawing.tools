@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="360">
-   <BOUNDS type="Window" left="3930" top="2955" width="12885" height="13725">
+   <PATCH nodename="C:\vvvv\projects\vvvv.drawing.tools\CanvasEditor (DX11).v4p" systemname="CreateShape (DX11)" filename="C:\vvvv\projects\vvvv.nodes\modules\Palette\CreateShape (DX11).v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="2220" top="2475" width="12885" height="13725">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
@@ -20,6 +20,8 @@
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Keyboard State" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.54402,0.54402,0.54402,1.00000|">
    </PIN>
    </NODE>
    <NODE nodename="S (Node)" id="2" systemname="S (Node)">
@@ -60,6 +62,8 @@
    <PIN pinname="Geometry" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="55" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 1">
@@ -139,6 +143,8 @@
    </BOUNDS>
    <PIN pinname="Selected Option" visible="1">
    </PIN>
+   <BOUNDS type="Box" left="765" top="540">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="137" srcpinname="Selected Option" dstnodeid="58" dstpinname="Ord Value">
    </LINK>
@@ -202,7 +208,11 @@
    <PIN pinname="Transforming" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Is Hit">
+   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Is Hit" linkstyle="VHV">
+   <LINKPOINT x="6735" y="4635">
+   </LINKPOINT>
+   <LINKPOINT x="8115" y="4635">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="140" dstpinname="Operation" linkstyle="Bezier">
    <LINKPOINT x="1380" y="3748">
@@ -833,7 +843,107 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="ColorPaletteHSV (DX11 Color)" filename="modules\ColorPaletteHSV (DX11 Color).v4p" nodename="ColorPaletteHSV (DX11 Color)" componentmode="Hidden" id="212">
-   <BOUNDS type="Node" left="3780" top="525" width="100" height="100">
+   <BOUNDS type="Node" left="3780" top="540" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3780" top="540">
    </BOUNDS>
    </NODE>
+   <NODE systemname="Store (Color)" filename="%VVVV%\addonpack\lib\nodes\plugins\Store.dll" nodename="Store (Color)" componentmode="Hidden" id="213">
+   <BOUNDS type="Node" left="5415" top="10185" width="3375" height="270">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Elements Colors|">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Insert" visible="1">
+   </PIN>
+   <PIN pinname="Remove" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="186" srcpinname="Output" dstnodeid="213" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Up Edge" dstnodeid="213" dstpinname="Insert" linkstyle="Bezier">
+   <LINKPOINT x="810" y="7868">
+   </LINKPOINT>
+   <LINKPOINT x="7785" y="7868">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="213" dstpinname="Remove">
+   </LINK>
+   <LINK srcnodeid="167" srcpinname="Y Output Value" dstnodeid="213" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Color" dstnodeid="213" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="3810" y="5498">
+   </LINKPOINT>
+   <LINKPOINT x="5430" y="5498">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="213" srcpinname="Output" dstnodeid="55" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Enum2String (Enumerations)" nodename="Enum2String (Enumerations)" componentmode="Hidden" id="218">
+   <BOUNDS type="Node" left="7230" top="8595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="EQ (String)" nodename="EQ (String)" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="7215" top="9180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="Fill">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Output Enum" dstnodeid="218" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="String Value" dstnodeid="219" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="221" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="7410" top="8880" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7410" top="8880" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="Fill">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="221" srcpinname="Output String" dstnodeid="219" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="222">
+   <BOUNDS type="Node" left="6840" top="9600" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="222" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="219" srcpinname="Output" dstnodeid="222" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="222" srcpinname="Output" dstnodeid="213" dstpinname="Set">
+   </LINK>
    </PATCH>
