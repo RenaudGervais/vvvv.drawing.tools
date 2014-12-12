@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="660" top="5580" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="13770" top="0" width="7185" height="3945">
+   <BOUNDS type="Window" left="-18000" top="15405" width="7185" height="3945">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Operation Palette|">
    </PIN>
