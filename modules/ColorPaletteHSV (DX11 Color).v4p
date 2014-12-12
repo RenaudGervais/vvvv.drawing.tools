@@ -121,7 +121,7 @@
    </PIN>
    <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Internal Value" slicecount="1" values="0">
+   <PIN pinname="Internal Value" slicecount="1" values="0.724409448818898">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>

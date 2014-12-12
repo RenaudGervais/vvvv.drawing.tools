@@ -5,9 +5,9 @@
    <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
-   <BOUNDS type="Node" left="585" top="11325" width="100" height="100">
+   <BOUNDS type="Node" left="585" top="12675" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="585" top="11325" width="6000" height="4500">
+   <BOUNDS type="Box" left="585" top="12675" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="20745" top="0" width="8055" height="7065">
    </BOUNDS>
@@ -25,7 +25,7 @@
    </PIN>
    </NODE>
    <NODE nodename="S (Node)" id="2" systemname="S (Node)">
-   <BOUNDS type="Node" left="600" top="13005" width="0" height="0">
+   <BOUNDS type="Node" left="600" top="14355" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="EditorMouseState">
    </PIN>
@@ -40,18 +40,6 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="49">
-   <BOUNDS type="Node" left="750" top="10920" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Out" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="49" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="55">
    <BOUNDS type="Node" left="450" top="10440" width="100" height="100">
    </BOUNDS>
@@ -66,8 +54,6 @@
    <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="55" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="24" srcpinname="Render State" dstnodeid="55" dstpinname="Render State">
    </LINK>
    <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="58">
@@ -165,6 +151,10 @@
    </PIN>
    <PIN pinname="Selected Index" visible="1">
    </PIN>
+   <PIN pinname="Highlight Line Width" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Highlight Color" slicecount="1" values="|0.75931,0.23099,0.77148,1.00000|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Output 1" dstnodeid="138" dstpinname="Transform" hiddenwhenlocked="1">
    <LINKPOINT x="5280" y="10365">
@@ -174,12 +164,6 @@
    <LINKPOINT x="10740" y="855">
    </LINKPOINT>
    <LINKPOINT x="6930" y="855">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="138" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 2" hiddenwhenlocked="1" linkstyle="Bezier">
-   <LINKPOINT x="7995" y="6960">
-   </LINKPOINT>
-   <LINKPOINT x="1170" y="6960">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="138" srcpinname="Selected" dstnodeid="87" dstpinname="Input">
@@ -655,7 +639,7 @@
    <LINK srcnodeid="180" srcpinname="Current Mesh ID" dstnodeid="173" dstpinname="Input">
    </LINK>
    <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="196">
-   <BOUNDS type="Node" left="600" top="11790" width="100" height="100">
+   <BOUNDS type="Node" left="600" top="13140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Mouse" visible="1">
    </PIN>
@@ -669,7 +653,7 @@
    <LINK srcnodeid="1" srcpinname="Mouse State" dstnodeid="196" dstpinname="Mouse">
    </LINK>
    <NODE nodename="S (Value)" id="197" systemname="S (Value)">
-   <BOUNDS type="Node" left="585" top="12195" width="0" height="0">
+   <BOUNDS type="Node" left="585" top="13545" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="EditorMouseXY">
    </PIN>
@@ -677,7 +661,7 @@
    <LINK srcnodeid="196" srcpinname="PositionXY" dstnodeid="197" dstpinname="Input Value">
    </LINK>
    <NODE nodename="S (Value)" id="198" systemname="S (Value)">
-   <BOUNDS type="Node" left="900" top="12540" width="0" height="0">
+   <BOUNDS type="Node" left="900" top="13890" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="EditorLeftButton">
    </PIN>
@@ -685,15 +669,15 @@
    <LINK srcnodeid="196" srcpinname="Left Button" dstnodeid="198" dstpinname="Input Value">
    </LINK>
    <NODE nodename="S (Value)" id="199" systemname="S (Value)">
-   <BOUNDS type="Node" left="2505" top="12540" width="0" height="0">
+   <BOUNDS type="Node" left="2505" top="13890" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="EditorRightButton">
    </PIN>
    </NODE>
    <LINK srcnodeid="196" srcpinname="Right Button" dstnodeid="199" dstpinname="Input Value" linkstyle="VHV">
-   <LINKPOINT x="1320" y="12285">
+   <LINKPOINT x="1320" y="13635">
    </LINKPOINT>
-   <LINKPOINT x="2505" y="12285">
+   <LINKPOINT x="2505" y="13635">
    </LINKPOINT>
    </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="200">
@@ -761,7 +745,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="206">
-   <BOUNDS type="Node" left="4215" top="11820" width="100" height="100">
+   <BOUNDS type="Node" left="4215" top="13170" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1">
    </PIN>
@@ -771,13 +755,13 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Keyboard State" dstnodeid="206" dstpinname="Keyboard" linkstyle="Bezier">
-   <LINKPOINT x="900" y="11733">
+   <LINKPOINT x="900" y="13083">
    </LINKPOINT>
-   <LINKPOINT x="4215" y="11653">
+   <LINKPOINT x="4215" y="13003">
    </LINKPOINT>
    </LINK>
    <NODE nodename="S (Value)" id="207" systemname="S (Value)">
-   <BOUNDS type="Node" left="4200" top="12540" width="0" height="0">
+   <BOUNDS type="Node" left="4200" top="13890" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="EditorDeleteKey">
    </PIN>
@@ -821,7 +805,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="211">
-   <BOUNDS type="Node" left="4215" top="12195" width="100" height="100">
+   <BOUNDS type="Node" left="4215" top="13545" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -945,5 +929,51 @@
    <LINK srcnodeid="219" srcpinname="Output" dstnodeid="222" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="222" srcpinname="Output" dstnodeid="213" dstpinname="Set">
+   </LINK>
+   <NODE systemname="Pillow (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Pillow.tfx" nodename="Pillow (DX11.TextureFX)" componentmode="Hidden" id="223">
+   <BOUNDS type="Node" left="2925" top="12180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="765" top="12180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="Layer Out" dstnodeid="1" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="224">
+   <BOUNDS type="Node" left="2490" top="12630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Selection Highlight" dstnodeid="49" dstpinname="Layer 5" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="8000" y="7388">
+   </LINKPOINT>
+   <LINKPOINT x="1645" y="7808">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="223" srcpinname="Texture Out" dstnodeid="224" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="224" srcpinname="Layer" dstnodeid="49" dstpinname="Layer 1">
    </LINK>
    </PATCH>
